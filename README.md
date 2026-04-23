@@ -20,9 +20,8 @@
 > 储存在 `data` 中，可手动加入, 也可通过掘金api获取
 > 数据来源于掘金，一方面是因为可以直接开通实盘，另一方面是因为熟悉 :）  
 > 
-> 使用掘金需要配置 API，在根目录添加 `config.toml` 并配置 
+> 使用掘金需要配置 API，在根目录添加 `.env` 并配置 
 > ``` 
-> [gm.token]
 > token = "your token"
 > ```
 > 执行 `src\data_loader\get_data.py`    # 获取全数据
