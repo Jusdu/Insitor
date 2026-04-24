@@ -30,7 +30,7 @@ except ImportError:
 # ------------------------------------------------------------------------
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DATA_DIR = BASE_DIR / "data" # Path("./data")
-RAW_DATA_PATH = DATA_DIR / "raw" / "all.parquet"
+RAW_DATA_PATH = DATA_DIR / "raw" / "all_stock_data.parquet"
 FACTOR_DIR = DATA_DIR / "factors"
 DESC_PATH = DATA_DIR / "factor_desc.yaml"
 # print(123, RAW_DATA_PATH, FACTOR_DIR, DESC_PATH)

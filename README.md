@@ -1,4 +1,4 @@
-# 股票因子看板
+# Insitor
 
 ## 连接
 ```
@@ -15,7 +15,6 @@
 <br>
 
 
-
 ## 数据
 > 储存在 `data` 中，可手动加入, 也可通过掘金api获取
 > 数据来源于掘金，一方面是因为可以直接开通实盘，另一方面是因为熟悉 :）  
@@ -24,9 +23,10 @@
 > ``` 
 > token = "your token"
 > ```
-> 执行 `src\data_loader\get_data.py`    # 获取全数据
+> 执行 `.\scripts\get_data.py`    # 获取全数据  
 > 执行 `src\factor_calc\get_factor.py`  # 获取因子数据
 <br>
+
 
 ### 格式要求
 - `price_data`
@@ -42,8 +42,8 @@
   - `index`: `pd.MultiIndex(date, symbol)`
   - `columns`: [`factor_name`]
   - `dtype`: `float`
-
 <br>
+
 
 ### 项目结构：
 ```
@@ -66,8 +66,8 @@
 ├── README.md
 └── run.py          # 主入口（未实装）
 ```
-
 <br>
+
 
 ## TODO
 1. 添加 `data\macro_factors` 的显示
