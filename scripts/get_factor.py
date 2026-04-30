@@ -18,15 +18,15 @@
 
 
 '''use type - 2 : auto import all factors'''
+import pandas as pd
 from src.factor.registry import auto_import
 from src.factor.pipeline.engine import Engine
 
 if __name__ == '__main__':
-    # 自动加载所有因子
+    # auto load all factors in the definitions folder, and register them to the registry
     auto_import("src.factor.definitions")
 
-    engine = Engine()
-
+    # define the factor configurations, each config is a tuple of (factor_name, factor_params)
     configs = [
         # ("SLOPE", {'n': 14, 'f': 'd'}),
         # ("SLOPE", {'n': 28, 'f': 'd'}),
@@ -47,7 +47,8 @@ if __name__ == '__main__':
         ),
     ]
 
-    
-    import pandas as pd
+    # load raw data
     data = pd.read_parquet('../data/raw/all_stock_data.parquet')
+    # create engine and run
+    engine = Engine()
     engine.fetch_and_save(configs, data)
